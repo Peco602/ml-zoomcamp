@@ -125,17 +125,17 @@ $ bentoml models list
  mlzoomcamp_homework:jsi67fslz6txydu5  bentoml.sklearn  5.82 KiB    2022-10-14 07:48:43 
  mlzoomcamp_homework:qtzdz3slg6mwwdu5  bentoml.sklearn  5.79 KiB    2022-10-13 13:42:14
 $ pipenv install scikit-learn==1.1.1
-$ bentoml serve cool_service.py:svc --production
+$ bentoml serve cool_service.py:svc --production -q
 $ locust -H http://localhost:3000
 ```
 
 |   | Max users | # Requests | # Fails | Median (ms) | 90%ile (ms) | 99%ile (ms) | Average (ms) | Min (ms) | Max (ms) | Average size (bytes) | Current RPS | Current Failures/s |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Model 1 | 100 | 6345 | 2 | 160 | 850 | 2500 | 342 | 8 | 6149 | 12 | 74.9 | 0 |
-| Model 1 | 500 | 6870 | 6 | 330 | 1800 | 11000 | 925 | 14 | 29548 | 12 | 82.6 | 0.2 |
-| Model 1 | 750 | 6392 | 1 | 350 | 1500 | 5500 | 667 | 9 | 9050 | 12 | 82.5 | 0 |
-| Model 2 | 100 | 5063 | 34 | 240 | 1900 | 4200 | 664 | 8 | 5350 | 13 | 55.8 | 1 |
-| Model 2 | 500 | 4939 | 6 | 550 | 2700 | 8900 | 1119 | 9 | 12399 | 12 | 63.9 | 0 |
-| Model 2 | 750 | 4652 | 10 | 570 | 2800 | 6400 | 1125 | 9 | 10701 | 12 | 60.6 | 0.4 |
+| Model 1 | 100 | 3716 | 0 | 28 | 100 | 300 | 47 | 7 | 663 | 12 | 90.7 | 0 |
+| Model 1 | 500 | 14362 | 0 | 130 | 1100 | 4400 | 431 | 6 | 18488 | 12 | 173.4 | 0 |
+| Model 1 | 750 | 14392 | 2 | 170 | 1100 | 6300 | 539 | 7 | 16274 | 12 | 179.8 | 0 |
+| Model 2 | 100 | 8125 | 0 | 30 | 100 | 360 | 51 | 6 | 1235 | 12 | 95.9 | 0 |
+| Model 2 | 500 | 12987 | 10 | 130 | 1200 | 5400 | 515 | 8 | 30681 | 12 | 163.2 | 0 |
+| Model 2 | 750 | 13316 | 15 | 230 | 1900 | 7900 | 729 | 6 | 15943 | 12 | 181.7 | 0.1 |
 
 The best is model one.

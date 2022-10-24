@@ -12,7 +12,7 @@ svc = bentoml.Service("cool_service", runners=[model_runner])
 @svc.api(input=NumpyNdarray(), output=JSON())
 async def classify(application_data):
     prediction = await model_runner.predict.async_run(application_data)
-    print(prediction)
+    # print(prediction)
     result = prediction[0]
     return {
         "result": result
