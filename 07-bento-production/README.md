@@ -1,4 +1,4 @@
-# Homework 6
+# Homework 7
 
 The virtual environment must be first initialized:
 
