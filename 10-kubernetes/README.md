@@ -109,8 +109,8 @@ Use the following command to create the HPA:
 $ kubectl autoscale deployment credit-card --name credit-card-hpa --cpu-percent=20 --min=1 --max=3
 horizontalpodautoscaler.autoscaling/credit-card-hpa autoscaled
 $ kubectl get hpa
-NAME              REFERENCE                TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
-credit-card-hpa   Deployment/credit-card   <unknown>/20%   1         3         0          13s
+NAME              REFERENCE                TARGETS   MINPODS   MAXPODS   REPLICAS   AGE
+credit-card-hpa   Deployment/credit-card   1%/20%    1         3         1          2h
 ```
 
 ## Increase the load
