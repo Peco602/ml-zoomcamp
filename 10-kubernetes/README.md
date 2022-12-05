@@ -79,7 +79,7 @@ credit-card
 
 ```bash
 $ kubectl apply -f kube-config/service.yaml
-service/credit-card created
+service/credit-card createdkubectl delete hpa credit-card-hpa
 $ kubectl get svc
 NAME          TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 credit-card   LoadBalancer   10.96.68.119   <pending>     80:30879/TCP   18s
@@ -112,10 +112,6 @@ $ kubectl get hpa
 NAME              REFERENCE                TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
 credit-card-hpa   Deployment/credit-card   <unknown>/20%   1         3         0          13s
 ```
-
-
-kubectl delete hpa credit-card-hpa
-kubectl autoscale deployment credit-card --name credit-card-hpa --cpu-percent=20 --min=1 --max=3
 
 ## Increase the load
 
